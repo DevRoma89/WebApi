@@ -39,7 +39,7 @@ namespace WebApiAutores.Controllers
         [HttpPost]
         public async Task<ActionResult> Post( [FromBody] Autor autor) {
 
-            var existe = await context.Autores.AnyAsync(x => x.Id == autor.Id);
+            var existe = await context.Autores.AnyAsync(x => x.Nombre == autor.Nombre);
 
             context.Add(autor);
 
