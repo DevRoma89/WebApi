@@ -7,18 +7,6 @@
       "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|c:\\users\\augusto.ojeda\\source\\repos\\webapi\\webapiautores\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|c:\\users\\augusto.ojeda\\source\\repos\\webapi\\webapiautores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|c:\\users\\augusto.ojeda\\source\\repos\\webapi\\webapiautores\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|c:\\users\\augusto.ojeda\\source\\repos\\webapi\\webapiautores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,6 +21,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|c:\\users\\augusto.ojeda\\source\\repos\\webapi\\webapiautores\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|c:\\users\\augusto.ojeda\\source\\repos\\webapi\\webapiautores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|c:\\users\\augusto.ojeda\\source\\repos\\webapi\\webapiautores\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA1AC948-4A67-4614-9A1B-B4112449670A}|WebApiAutores\\WebApiAutores.csproj|solutionrelative:webapiautores\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AutoresController.cs",
-              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Controllers\\AutoresController.cs",
-              "RelativeDocumentMoniker": "WebApiAutores\\Controllers\\AutoresController.cs",
-              "ToolTip": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Controllers\\AutoresController.cs",
-              "RelativeToolTip": "WebApiAutores\\Controllers\\AutoresController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAswE0AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T15:42:59.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "LibrosController.cs",
               "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Controllers\\LibrosController.cs",
               "RelativeDocumentMoniker": "WebApiAutores\\Controllers\\LibrosController.cs",
@@ -72,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "20240906152152_Inicial.cs",
               "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Migrations\\20240906152152_Inicial.cs",
               "RelativeDocumentMoniker": "WebApiAutores\\Migrations\\20240906152152_Inicial.cs",
@@ -85,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "WebApiAutores\\ApplicationDbContext.cs",
@@ -104,14 +87,14 @@
               "RelativeDocumentMoniker": "WebApiAutores\\Controllers\\ClientesController.cs",
               "ToolTip": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "WebApiAutores\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAkwE0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T15:17:04.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Entidades\\Cliente.cs",
               "RelativeDocumentMoniker": "WebApiAutores\\Entidades\\Cliente.cs",
@@ -124,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Program.cs",
               "RelativeDocumentMoniker": "WebApiAutores\\Program.cs",
@@ -137,13 +120,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Startup.cs",
               "RelativeDocumentMoniker": "WebApiAutores\\Startup.cs",
               "ToolTip": "C:\\Users\\augusto.ojeda\\source\\repos\\WebApi\\WebApiAutores\\Startup.cs",
               "RelativeToolTip": "WebApiAutores\\Startup.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA5wAMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwAMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T11:38:11.449Z",
               "EditorCaption": ""

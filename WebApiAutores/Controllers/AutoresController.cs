@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿    using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiAutores.Entidades;
 
@@ -25,9 +25,10 @@ namespace WebApiAutores.Controllers
 
             var autor = await context.Autores.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (autor == null) {
+            if (autor == null)
+            {
 
-                return NotFound();
+                return NotFound("No se encuentra este ID");
 
             }
 

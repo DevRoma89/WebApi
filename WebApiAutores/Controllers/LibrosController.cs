@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiAutores.Entidades;
 
@@ -13,6 +14,13 @@ namespace WebApiAutores.Controllers
         public LibrosController(ApplicationDbContext context)
         {
             this.context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Libro>>> GetAll() { 
+        
+            return await context.Libros.Include(x => x.Autor).ToListAsync();    
+        
         }
 
         [HttpGet("{id:int}")]
