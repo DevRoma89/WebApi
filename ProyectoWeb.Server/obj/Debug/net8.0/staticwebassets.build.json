@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2dcGhSRqeROLYwgrY1ldLWHsClJi2zFcz/JsFJj5PbU=",
+  "Source": "ProyectoWeb.Server",
+  "BasePath": "_content/ProyectoWeb.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

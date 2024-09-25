@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|c:\\users\\augusto.ojeda\\source\\repos\\proyectoweb\\proyectoweb.server\\controllers\\persona\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|solutionrelative:proyectoweb.server\\controllers\\persona\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|c:\\users\\augusto.ojeda\\source\\repos\\proyectoweb\\proyectoweb.server\\controllers\\oc\\ordencompracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|solutionrelative:proyectoweb.server\\controllers\\oc\\ordencompracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|c:\\users\\augusto.ojeda\\source\\repos\\proyectoweb\\proyectoweb.server\\controllers\\oc\\ordencompradetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|solutionrelative:proyectoweb.server\\controllers\\oc\\ordencompradetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\ProyectoWeb.Server\\Controllers\\Persona\\ClienteController.cs",
+              "RelativeDocumentMoniker": "ProyectoWeb.Server\\Controllers\\Persona\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\ProyectoWeb.Server\\Controllers\\Persona\\ClienteController.cs",
+              "RelativeToolTip": "ProyectoWeb.Server\\Controllers\\Persona\\ClienteController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwFAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T19:54:14.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdenCompraDetalleController.cs",
+              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraDetalleController.cs",
+              "RelativeDocumentMoniker": "ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraDetalleController.cs",
+              "ToolTip": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraDetalleController.cs",
+              "RelativeToolTip": "ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraDetalleController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T00:43:31.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdenCompraController.cs",
+              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "RelativeDocumentMoniker": "ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "ToolTip": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "RelativeToolTip": "ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T00:43:16.515Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
