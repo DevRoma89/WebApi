@@ -275,3 +275,6 @@ C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Server\obj\Debug\net
 C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Server\obj\Debug\net8.0\ProyectoWeb.Server.pdb
 C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Server\obj\Debug\net8.0\ProyectoWeb.Server.genruntimeconfig.cache
 C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Server\obj\Debug\net8.0\ref\ProyectoWeb.Server.dll
+C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Server\obj\Debug\net8.0\ProyectoWeb.Server.sourcelink.json
+C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Server\bin\Debug\net8.0\Mapster.dll
+C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Server\bin\Debug\net8.0\Mapster.Core.dll

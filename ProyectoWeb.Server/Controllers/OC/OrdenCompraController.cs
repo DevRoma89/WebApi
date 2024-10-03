@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProyectoWeb.Shared.DTOs;
 using ProyectoWeb.Shared.Entidades;
 
 namespace ProyectoWeb.Server.Controllers.OC
@@ -18,10 +19,49 @@ namespace ProyectoWeb.Server.Controllers.OC
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<OrdenCompraCabecera>>> GetAll() {
+        public async Task<ActionResult<List<OCCabeceraDTO>>> GetAll() {
 
-            return await context.Cabeceras.Include(x => x.Detalle).ToListAsync();
+            return await context.Cabeceras
+                .Include(x => x.Cliente)
+                .Include(x => x.Usuario)
+                .Include(x => x.Detalle)
+                .Select(
+                    c => new OCCabeceraDTO
+                    {
 
+                        Id = c.Id,
+                        NombreCliente = c.Cliente.Nombre,
+                        NombreUsuario = c.Usuario.Nombre,
+                        Fecha = c.Fecha,
+                        FechaEntrega = c.FechaEntrega,
+                        Estado = c.Estado,
+                        Monto = c.Monto,
+                        Detalle = c.Detalle.Select(d => new OCDetalleDTO {
+
+                            Id = d.Id,
+                            NombreLibro = d.Libro.Titulo,
+                            Cantidad = d.Cantidad,
+                            Precio = d.Precio,
+                            Total = d.Total
+
+
+                        }).ToList()
+
+                    }
+                )
+                .ToListAsync();
+
+        }
+
+        [HttpGet("/simple")]
+        public async Task<ActionResult<List<OCCabeceraDTO>>> GetSimple() {
+
+            var resultado = await context.Cabeceras.Include(x => x.Cliente).Include(x => x.Usuario).Include(x => x.Detalle)
+                .Select( s => OCCabeceraDTO.CrearDTO(s)) 
+                .ToListAsync();    
+
+            return Ok(resultado);
+        
         }
 
         [HttpGet("/cliente/{id:int}")]
@@ -68,6 +108,27 @@ namespace ProyectoWeb.Server.Controllers.OC
             context.Add(ordenCompraCabecera); 
             await context.SaveChangesAsync();
             return Ok(ordenCompraCabecera.Id);
+
+
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(int id , OCCabeceraDTO dto) {
+
+            var actual = await context.Cabeceras.FindAsync(id);
+
+            if (actual == null)
+            {
+                return NotFound($"No se encontro una cabecera con el Id {id}");
+            }
+
+            actual.FechaEntrega = dto.FechaEntrega;
+            actual.Estado = dto.Estado;
+
+
+            context.Update(actual);
+            await context.SaveChangesAsync();
+            return Ok(actual);
 
 
         }

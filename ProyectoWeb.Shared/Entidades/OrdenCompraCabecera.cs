@@ -11,7 +11,9 @@ namespace ProyectoWeb.Shared.Entidades
 
         public int Id { get; set; }
         public int ClienteId { get; set; }
+        public Cliente Cliente { get; set; }
         public int UsuarioId { get; set; }  
+        public Usuario Usuario { get; set; }
         public DateTime Fecha { get; set; }
         public DateTime FechaEntrega { get; set; }
         public string Estado { get; set; } = "PENDIENTE";

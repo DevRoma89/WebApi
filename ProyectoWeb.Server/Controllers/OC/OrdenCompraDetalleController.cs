@@ -35,6 +35,14 @@ namespace ProyectoWeb.Server.Controllers.OC
 
             }
 
+            var existeLibro = await context.Libros.AnyAsync(x => x.Id == ordenCompraDetalle.LibroId);
+
+            if (!existeLibro) {
+
+                return NotFound($"No se encontro el libro con Id: {ordenCompraDetalle.LibroId}");
+
+            }
+
             context.Add(ordenCompraDetalle); 
             await context.SaveChangesAsync();
             return Ok(ordenCompraDetalle.Id);

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoWeb.Client", "ProyectoWeb.Client\ProyectoWeb.Client.csproj", "{BE69890F-268D-4F98-B0BE-9FD693519A3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoWeb.Server", "ProyectoWeb.Server\ProyectoWeb.Server.csproj", "{45584146-B09E-4AB0-A9A1-60250A052796}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoWeb.Server", "ProyectoWeb.Server\ProyectoWeb.Server.csproj", "{45584146-B09E-4AB0-A9A1-60250A052796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoWeb.Shared", "ProyectoWeb.Shared\ProyectoWeb.Shared.csproj", "{A553A2FD-320F-44AB-A03E-EF57BD3B851C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoWeb.Shared", "ProyectoWeb.Shared\ProyectoWeb.Shared.csproj", "{A553A2FD-320F-44AB-A03E-EF57BD3B851C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

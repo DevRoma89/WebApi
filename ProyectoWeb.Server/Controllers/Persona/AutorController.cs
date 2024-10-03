@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProyectoWeb.Shared.DTOs;
 using ProyectoWeb.Shared.Entidades;
+using Mapster;
 
 namespace ProyectoWeb.Server.Controllers.Persona
 {
@@ -16,18 +19,35 @@ namespace ProyectoWeb.Server.Controllers.Persona
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Autor>>> GetAll()
+        public async Task<ActionResult<List<AutorDTO>>> GetAll()
         {
 
-            return await context.Autores.Include(x => x.Libros).ToListAsync();
+            var autores =  await context.Autores.Include(x => x.Libros).ToListAsync();
+
+            return autores.Adapt<List<AutorDTO>>();  
+            
+            
 
         }
 
-        [HttpPost]
-        public async Task<ActionResult<int>> Post(Autor autor)
-        {
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Autor>> GetById(int id) {
 
-            var repetido = await context.Autores.AnyAsync(x => x.Nombre == autor.Nombre);
+            var autor = await context.Autores.FindAsync(id);
+
+            if ( autor == null ) { 
+                return NotFound("No se encontro un Autor con ese Id");
+            }
+
+            return autor;
+
+        } 
+ 
+        [HttpPost]
+        public async Task<ActionResult<int>> Post(AutorDTO autorDTO)
+{
+
+            var repetido = await context.Autores.AnyAsync(x => x.Nombre == autorDTO.Nombre);
 
             if (repetido)
             {
@@ -36,11 +56,15 @@ namespace ProyectoWeb.Server.Controllers.Persona
 
             }
 
+            Autor autor = autorDTO.Adapt<Autor>();   
+
             context.Add(autor);
             await context.SaveChangesAsync();
             return Ok(autor.Id);
 
         }
+
+
 
     }
 }

@@ -11,6 +11,7 @@ namespace ProyectoWeb.Shared.Entidades
         public int Id { get; set; }
         public int OrdenCompraCabeceraId { get; set; }
         public int LibroId { get; set; }
+        public Libro Libro { get; set; }
         public int Precio { get; set; } 
         public int Cantidad { get; set; }
         public int Total { get; set; }

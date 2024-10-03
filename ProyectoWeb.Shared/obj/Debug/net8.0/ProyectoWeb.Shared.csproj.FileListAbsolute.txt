@@ -20,3 +20,5 @@ C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Shared\obj\Debug\net
 C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Shared\obj\Debug\net8.0\refint\ProyectoWeb.Shared.dll
 C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Shared\obj\Debug\net8.0\ProyectoWeb.Shared.pdb
 C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Shared\obj\Debug\net8.0\ref\ProyectoWeb.Shared.dll
+C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Shared\obj\Debug\net8.0\ProyectoWeb.Shared.sourcelink.json
+C:\Users\augusto.ojeda\source\repos\ProyectoWeb\ProyectoWeb.Shared\obj\Debug\net8.0\ProyectoWeb.Shared.csproj.AssemblyReference.cache

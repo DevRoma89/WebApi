@@ -3,6 +3,9 @@ build_property.EnableAotAnalyzer =
 build_property.EnableSingleFileAnalyzer = 
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudIllegalParameters = 
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -32,6 +35,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/augusto.ojeda/source/repos/ProyectoWeb/ProyectoWeb.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/augusto.ojeda/source/repos/ProyectoWeb/ProyectoWeb.Client/Pages/OrdenCompra.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZW5Db21wcmEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/augusto.ojeda/source/repos/ProyectoWeb/ProyectoWeb.Client/Pages/Weather.razor]

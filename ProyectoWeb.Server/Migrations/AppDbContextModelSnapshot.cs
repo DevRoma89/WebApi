@@ -112,6 +112,10 @@ namespace ProyectoWeb.Server.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("UsuarioId");
+
                     b.ToTable("Cabeceras");
                 });
 
@@ -139,6 +143,8 @@ namespace ProyectoWeb.Server.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("LibroId");
 
                     b.HasIndex("OrdenCompraCabeceraId");
 
@@ -184,13 +190,40 @@ namespace ProyectoWeb.Server.Migrations
                     b.Navigation("Autor");
                 });
 
+            modelBuilder.Entity("ProyectoWeb.Shared.Entidades.OrdenCompraCabecera", b =>
+                {
+                    b.HasOne("ProyectoWeb.Shared.Entidades.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProyectoWeb.Shared.Entidades.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("ProyectoWeb.Shared.Entidades.OrdenCompraDetalle", b =>
                 {
+                    b.HasOne("ProyectoWeb.Shared.Entidades.Libro", "Libro")
+                        .WithMany()
+                        .HasForeignKey("LibroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ProyectoWeb.Shared.Entidades.OrdenCompraCabecera", null)
                         .WithMany("Detalle")
                         .HasForeignKey("OrdenCompraCabeceraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Libro");
                 });
 
             modelBuilder.Entity("ProyectoWeb.Shared.Entidades.Autor", b =>

@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[ProyectoWeb.Shared.Entidades.Autor, ProyectoWeb.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[ProyectoWeb.Shared.DTOs.AutorDTO, ProyectoWeb.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,14 +28,40 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "autor",
-        "Type": "ProyectoWeb.Shared.Entidades.Autor",
+        "Name": "autorDTO",
+        "Type": "ProyectoWeb.Shared.DTOs.AutorDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
         "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoWeb.Server.Controllers.Persona.AutorController",
+    "Method": "GetById",
+    "RelativePath": "api/autor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoWeb.Shared.Entidades.Autor",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -189,7 +215,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[ProyectoWeb.Shared.Entidades.OrdenCompraCabecera, ProyectoWeb.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[ProyectoWeb.Shared.DTOs.OCCabeceraDTO, ProyectoWeb.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -224,6 +250,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ProyectoWeb.Server.Controllers.OC.OrdenCompraController",
+    "Method": "Put",
+    "RelativePath": "api/ordenCompra/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ProyectoWeb.Shared.DTOs.OCCabeceraDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ProyectoWeb.Server.Controllers.OC.OrdenCompraController",
@@ -407,6 +454,26 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[ProyectoWeb.Shared.Entidades.OrdenCompraCabecera, ProyectoWeb.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoWeb.Server.Controllers.OC.OrdenCompraController",
+    "Method": "GetSimple",
+    "RelativePath": "simple",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ProyectoWeb.Shared.DTOs.OCCabeceraDTO, ProyectoWeb.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
