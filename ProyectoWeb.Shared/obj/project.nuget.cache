@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yC8CNwq1s1z44P5DKDEaiSL9841hs20IYgrReY2kIOdt3px5fnrfsa9zjgviSXYMkjl/NewYXF6KCAqNhE80Mw==",
+  "dgSpecHash": "KQdzTHHvLgE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Manu\\Source\\Repos\\WebApi\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj",
+  "projectFilePath": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Manu\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
-    "C:\\Users\\Manu\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512"
+    "C:\\Users\\augusto.ojeda\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\augusto.ojeda\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512"
   ],
   "logs": []
 }

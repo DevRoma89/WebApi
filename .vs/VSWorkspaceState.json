@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProyectoWeb.Client"
   ],
-  "SelectedNode": "\\ProyectoWeb.sln",
+  "SelectedNode": "\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
   "PreviewInSolutionExplorer": false
 }

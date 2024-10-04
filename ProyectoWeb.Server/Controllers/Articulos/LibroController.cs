@@ -20,9 +20,9 @@ namespace ProyectoWeb.Server.Controllers.Articulos
         public async Task<ActionResult<List<LibroDTO>>> GetAll()
         {
 
-           return await context.Libros.Select(s => new LibroDTO.CrearDTO(s)).ToListAsync();
-
-
+           return await context.Libros.Include( x => x.Autor)
+                        .Select(s => LibroDTO.CrearDTO(s))
+                        .ToListAsync();
 
         }
 

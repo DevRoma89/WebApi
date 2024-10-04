@@ -1,0 +1,136 @@
+﻿@page "/usuarios"
+@inject IRepositorioOC repositorio
+@inject ISnackbar snackBar
+@inject NavigationManager navigatorManager
+
+<MudCard Elevation="25">
+
+    <MudCardHeader>
+
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6"> Agregar / Buscar Usuarios </MudText>
+        </CardHeaderContent>
+
+    </MudCardHeader>
+
+    <MudCardContent>
+
+        <div class="d-flex">
+
+            <MudTextField @bind-Value="usuario.Nombre" Label="Nombre" Variant="Variant.Text" Margin="Margin.Normal" Class="me-5"></MudTextField>
+            <MudTextField @bind-Value="usuario.Apellido" Label="Apellido" Variant="Variant.Text" Margin="Margin.Normal" Class="me-5"></MudTextField>
+            <MudTextField @bind-Value="usuario.Cedula" Label="Cedula" Variant="Variant.Text" Margin="Margin.Normal" Class="me-5"></MudTextField>
+
+
+        </div>
+        <div class="d-flex">
+
+            <MudTextField @bind-Value="usuario.Username" Label="Username" Variant="Variant.Text" Margin="Margin.Normal" Class="me-5"></MudTextField>
+            <MudTextField @bind-Value="usuario.Password" Label="Password" Variant="Variant.Text" Margin="Margin.Normal" Class="me-5"></MudTextField>
+           
+
+        </div>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="GuardarUsuario">Guardar Usuario</MudButton>
+
+    </MudCardContent>
+
+</MudCard>
+<br />
+
+<MudTable Elevation="25" Items="usuarios" Dense="true" Hover="true" Filter="new Func<Usuario, bool>(Buscar)" @bind-autor="usuario">
+    <ToolBarContent>
+        <MudText>Libro</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="searchString" Placeholder="Buscar" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortBy="new Func<Usuario, object>(x=>x.Nombre)">Nombre del Usuario</MudTableSortLabel></MudTh>
+        <MudTd>Apellido</MudTd>
+        <MudTd>Cedula</MudTd>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Nombre">@context.Nombre</MudTd>
+        <MudTd DataLabel="Apellido">@context.Apellido</MudTd>
+        <MudTd DataLabel="Cedula">@context.Cedula</MudTd>
+    </RowTemplate>
+
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+
+</MudTable>
+
+
+
+@code {
+
+    private bool hover = false;
+    private string searchString = "";
+
+    private List<Usuario> usuarios = new List<Usuario>();
+    private Usuario usuario = new Usuario();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await GetUsuarios();
+       
+
+    }
+
+    public void IrA(int id)
+    {
+
+        navigatorManager.NavigateTo($"/OC/{id}");
+
+    }
+
+    private bool Buscar(Usuario user)
+    {
+        if (string.IsNullOrWhiteSpace(searchString)) return true;
+        if (user.Nombre.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public async Task<List<Usuario>> GetUsuarios()
+    {
+
+        var httpResponse = await repositorio.Get<List<Usuario>>("/api/usuario");
+
+        if (!(httpResponse.Error))
+        {
+            usuarios = httpResponse.Response;
+
+            return usuarios;
+        }
+
+        return usuarios;
+
+    }   
+
+
+    public async Task GuardarUsuario()
+    {
+
+        var respuesta = await repositorio.Post<Usuario>("api/usuario", usuario);
+
+        if (respuesta.Error)
+        {
+            snackBar.Add(await respuesta.GetBody(), Severity.Error);
+        }
+        else
+        {
+            snackBar.Add("Libro agregado correctamente", Severity.Success);
+            usuario = new Usuario();
+            await GetUsuarios();
+        }
+
+
+
+
+    }
+
+}
