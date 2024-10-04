@@ -1,0 +1,120 @@
+﻿@page "/autores"
+@inject IRepositorioOC repositorio
+@inject ISnackbar snackBar
+@inject NavigationManager navigatorManager
+ 
+
+<PageTitle>Inicio</PageTitle>
+
+<MudCard Elevation="25">
+
+    <MudCardHeader>
+
+        <CardHeaderContent>
+            
+            <MudText Typo="Typo.h6"> Agregar / Buscar Autores </MudText>
+        </CardHeaderContent>
+
+    </MudCardHeader>
+
+    <MudCardContent>
+
+        <MudTextField @bind-Value="autor.Nombre" Label="Nombre del Autor" Variant="Variant.Text" Margin="Margin.Normal"></MudTextField>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="GuardarAutores" >Save Customer</MudButton>
+
+    </MudCardContent>
+
+</MudCard>
+<br />
+
+<MudTable Elevation="25" Items="autores" Dense="true" Hover="true"  Filter="new Func<AutorDTO, bool>(Buscar)" @bind-autor="autor"> 
+    <ToolBarContent>
+        <MudText>Autores</MudText>
+        <MudSpacer/>
+        <MudTextField @bind-Value="searchString" Placeholder="Buscar" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortBy="new Func<AutorDTO, object>(x=>x.Nombre)">Nombre del Autor</MudTableSortLabel></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Nombre">@context.Nombre</MudTd>
+    </RowTemplate>
+
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+
+</MudTable>
+
+
+
+@code{
+
+    private bool hover = false;
+    private string searchString = "";
+
+    private List<AutorDTO> autores = new List<AutorDTO>(); 
+    private AutorDTO autor = new AutorDTO(); 
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await GetAutores(); 
+
+    }
+
+    public void IrA(int id )
+    {
+
+        navigatorManager.NavigateTo($"/OC/{id}");
+
+    }
+
+    private bool Buscar(AutorDTO autorDTO)
+    {
+        if (string.IsNullOrWhiteSpace(searchString)) return true;
+        if (autorDTO.Nombre.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public async Task<List<AutorDTO>> GetAutores()
+    {
+
+        var httpResponse = await repositorio.Get<List<AutorDTO>>("/api/autor");
+
+        if (!(httpResponse.Error))
+        {
+            autores = httpResponse.Response;
+
+            return autores; 
+        }
+
+        return autores ; 
+
+    }
+
+    public async Task GuardarAutores()
+    {
+
+        var respuesta = await repositorio.Post<AutorDTO>("api/autor", autor);
+
+        if (respuesta.Error)
+        {
+            snackBar.Add(await respuesta.GetBody(), Severity.Error);
+        }
+        else
+        {
+            snackBar.Add("Autor agregado correctamente", Severity.Success);
+            autor = new AutorDTO();
+            await GetAutores(); 
+        }
+
+      
+    
+    
+    }
+
+}

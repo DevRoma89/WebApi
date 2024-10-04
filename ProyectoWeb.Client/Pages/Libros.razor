@@ -1,0 +1,160 @@
+﻿@page "/libros"
+@inject IRepositorioOC repositorio
+@inject ISnackbar snackBar
+@inject NavigationManager navigatorManager
+
+<MudCard Elevation="25">
+
+    <MudCardHeader>
+
+        <CardHeaderContent>
+
+            <MudText Typo="Typo.h6"> Agregar / Buscar Libros </MudText>
+        </CardHeaderContent>
+
+    </MudCardHeader>
+
+    <MudCardContent>
+
+        <div class="d-flex">
+
+            <MudTextField @bind-Value="libro.Titulo" Label="Titulo del Libro" Variant="Variant.Text" Margin="Margin.Normal" Class="me-5"></MudTextField>
+            
+            <MudSelect @bind-Value="libro.AutorId">
+
+                @if ( autores != null)
+                {
+
+                    foreach (var item in autores)
+                    {
+                        <MudSelectItem Value="@item.Id"> @item.Nombre </MudSelectItem>
+
+                    }
+                    
+                }
+
+            </MudSelect>
+
+
+        </div>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="GuardarAutores">Save Customer</MudButton>
+
+    </MudCardContent>
+
+</MudCard>
+<br />
+
+<MudTable Elevation="25" Items="libros" Dense="true" Hover="true" Filter="new Func<LibroDTO, bool>(Buscar)" @bind-autor="libro">
+    <ToolBarContent>
+        <MudText>Libro</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="searchString" Placeholder="Buscar" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortBy="new Func<LibroDTO, object>(x=>x.Titulo)">Titulo del Libro</MudTableSortLabel></MudTh>
+        <MudTd>Autor</MudTd>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Titulo">@context.Titulo</MudTd>
+        <MudTd DataLabel="Autor">@context.NombreAutor</MudTd>
+    </RowTemplate>
+
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+
+</MudTable>
+
+
+
+@code {
+
+    private bool hover = false;
+    private string searchString = "";
+
+    private List<LibroDTO> libros = new List<LibroDTO>();
+    private List<AutorDTO> autores = new List<AutorDTO>();
+    private LibroDTO libro = new LibroDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await GetLibros();
+        await GetAutores();
+
+    }
+
+    public void IrA(int id)
+    {
+
+        navigatorManager.NavigateTo($"/OC/{id}");
+
+    }
+
+    private bool Buscar(LibroDTO libroDTO)
+    {
+        if (string.IsNullOrWhiteSpace(searchString)) return true;
+        if (libroDTO.Titulo.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public async Task<List<LibroDTO>> GetLibros()
+    {
+
+        var httpResponse = await repositorio.Get<List<LibroDTO>>("/api/libro");
+
+        if (!(httpResponse.Error))
+        {
+            libros = httpResponse.Response;
+
+            return libros;
+        }
+
+        return libros;
+
+    }
+
+
+    public async Task<List<AutorDTO>> GetAutores()
+    {
+
+        var httpResponse = await repositorio.Get<List<AutorDTO>>("/api/autor");
+
+        if (!(httpResponse.Error))
+        {
+            autores = httpResponse.Response;
+
+            return autores;
+        }
+
+        return autores;
+
+    }
+
+    
+
+    public async Task GuardarAutores()
+    {
+
+        var respuesta = await repositorio.Post<LibroDTO>("api/libro", libro);
+
+        if (respuesta.Error)
+        {
+            snackBar.Add(await respuesta.GetBody(), Severity.Error);
+        }
+        else
+        {
+            snackBar.Add("Libro agregado correctamente", Severity.Success);
+            libro = new LibroDTO();
+            await GetLibros();
+        }
+
+
+
+
+    }
+
+}
