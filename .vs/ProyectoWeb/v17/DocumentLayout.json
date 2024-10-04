@@ -1,16 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\augusto.ojeda\\source\\repos\\ProyectoWeb\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\augusto.ojeda\\source\\repos\\proyectoweb\\proyectoweb.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|solutionrelative:proyectoweb.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Manu\\source\\repos\\WebApi\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -32,6 +28,9 @@
           ]
         }
       ]
+=======
+      "DocumentGroups": []
+>>>>>>> bdc7ecb5b51f4464169bc6de4f92818ceebdfe72
     }
   ]
 }

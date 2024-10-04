@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProyectoWeb.Shared.DTOs;
 using ProyectoWeb.Shared.Entidades;
 
 namespace ProyectoWeb.Server.Controllers.Articulos
@@ -16,10 +17,12 @@ namespace ProyectoWeb.Server.Controllers.Articulos
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Libro>>> GetAll()
+        public async Task<ActionResult<List<LibroDTO>>> GetAll()
         {
 
-            return await context.Libros.ToListAsync();
+           return await context.Libros.Select(s => new LibroDTO.CrearDTO(s)).ToListAsync();
+
+
 
         }
 
