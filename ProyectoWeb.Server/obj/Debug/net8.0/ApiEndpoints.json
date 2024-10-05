@@ -253,6 +253,32 @@
   },
   {
     "ContainingType": "ProyectoWeb.Server.Controllers.OC.OrdenCompraController",
+    "Method": "GetAById",
+    "RelativePath": "api/ordenCompra/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoWeb.Shared.Entidades.OrdenCompraCabecera",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoWeb.Server.Controllers.OC.OrdenCompraController",
     "Method": "Put",
     "RelativePath": "api/ordenCompra/{id}",
     "HttpMethod": "PUT",

@@ -1,0 +1,138 @@
+﻿@page "/consultar"
+
+@inject IRepositorioOC repositorio
+@inject ISnackbar snackBar
+@inject NavigationManager navigatorManager
+
+
+<PageTitle>Inicio</PageTitle>
+
+<MudCard Elevation="25">
+
+    <MudCardHeader>
+
+        <CardHeaderContent>
+
+            <MudText Typo="Typo.h6"> Agregar / Buscar Autores </MudText>
+        </CardHeaderContent>
+
+    </MudCardHeader>
+
+    <MudCardContent>
+
+      <MudGrid>
+          <MudItem xs="4">
+                <MudSelect @bind-Value="cliente.Id" Label="Search" AnchorOrigin="Origin.CenterLeft" TransformOrigin="Origin.CenterRight" Variant="Variant.Outlined">
+                    @if (clientes != null)
+                    {
+
+                        foreach (var item in clientes)
+                        {
+                            <MudSelectItem Value="@item.Id"> @item.Cedula | @item.Nombre  </MudSelectItem>
+
+                        }
+
+                    }
+                </MudSelect>
+          </MudItem>
+            <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Search" Class="mt-8 ms-4" OnClick="GetOCC" />
+      </MudGrid>
+
+       
+
+    </MudCardContent>
+
+</MudCard>
+<br />
+
+ <MudTable Elevation="25" Items="occ" Hover="true" >
+   
+    <HeaderContent>
+        <MudTh>Nro Oc</MudTh>
+        <MudTh>Fecha</MudTh>
+        <MudTh>Fecha de Entrega</MudTh>
+        <MudTh>Estado</MudTh>
+        <MudTh>Monto Total</MudTh>
+        <MudTh>Ver OC</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+    
+        
+            <MudTd DataLabel="Nombre">@context.Id</MudTd>
+            <MudTd DataLabel="Fecha">@context.Fecha</MudTd>
+            <MudTd DataLabel="FechaEntrega">@context.FechaEntrega</MudTd>
+            <MudTd DataLabel="Estado">@context.Estado</MudTd>
+            <MudTd DataLabel="Monto">@context.Monto</MudTd>
+        <MudTd DataLabel="Accion">
+            <MudFab Color="Color.Primary" Size="Size.Small" StartIcon="@Icons.Material.Filled.Preview" OnClick="() => IrA(context.Id)"/>
+        </MudTd>
+        
+
+    </RowTemplate>
+
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+
+</MudTable>
+ 
+
+
+@code {
+
+    private Cliente cliente = new Cliente(); 
+    private List<Cliente> clientes = new List<Cliente>();
+    private List<OrdenCompraCabecera> occ = new List<OrdenCompraCabecera>(); 
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await GetClientes(); 
+
+
+    }
+
+    public void IrA( int id)
+    {
+
+        navigatorManager.NavigateTo($"/ordenCompra/{id}"); 
+
+    }
+
+    public async Task<List<OrdenCompraCabecera>> GetOCC()
+    {
+
+        var httpResponse = await repositorio.Get<List<OrdenCompraCabecera>>($"/cliente/{cliente.Id}");
+
+        if (!(httpResponse.Error))
+        {
+            occ = httpResponse.Response;
+            StateHasChanged();
+            return occ;
+
+        }
+        StateHasChanged();
+        return occ;
+
+    }
+
+
+    public async Task<List<Cliente>> GetClientes()
+    {
+
+        var httpResponse = await repositorio.Get<List<Cliente>>("/api/cliente");
+
+        if (!(httpResponse.Error))
+        {
+            clientes = httpResponse.Response;
+
+            return clientes;
+        }
+
+        return clientes;
+
+    }
+
+    
+
+}

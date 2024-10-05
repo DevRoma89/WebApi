@@ -18,7 +18,7 @@ namespace ProyectoWeb.Shared.DTOs
         public DateTime FechaEntrega { get; set; }
         public string Estado { get; set; }  
         public int Monto { get; set; }
-        public List<OCDetalleDTO> Detalle { get; set; }
+        public List<OCDetalleDTO> Detalle { get; set; } = new List<OCDetalleDTO>();
 
         public static OCCabeceraDTO CrearDTO(OrdenCompraCabecera modelo)
         {

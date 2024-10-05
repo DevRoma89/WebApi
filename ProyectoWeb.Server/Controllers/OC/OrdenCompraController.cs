@@ -30,7 +30,9 @@ namespace ProyectoWeb.Server.Controllers.OC
                     {
 
                         Id = c.Id,
+                        ClienteId = c.ClienteId,
                         NombreCliente = c.Cliente.Nombre,
+                        UsuarioId   = c.UsuarioId,  
                         NombreUsuario = c.Usuario.Nombre,
                         Fecha = c.Fecha,
                         FechaEntrega = c.FechaEntrega,
@@ -75,7 +77,28 @@ namespace ProyectoWeb.Server.Controllers.OC
 
             }
 
-            return await context.Cabeceras.Include(x => x.Detalle).ToListAsync();
+            return await context.Cabeceras
+                .Include(x => x.Detalle)
+                .Where( x => x.ClienteId == id).ToListAsync();
+
+        }
+        //[HttpGet("{id:int}")]
+        //public async Task<ActionResult<List<OrdenCompraCabecera>>> GetAById( int id)
+        //{
+
+        //    return await context.Cabeceras
+        //        .Include(x => x.Detalle)
+        //        .Where(x => x.Id == id).ToListAsync();
+
+        //}
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<OrdenCompraCabecera>> GetAById(int id)
+        {
+
+            return await context.Cabeceras
+                .Include(x => x.Detalle)
+                .FirstOrDefaultAsync( x => x.Id == id);
 
         }
 

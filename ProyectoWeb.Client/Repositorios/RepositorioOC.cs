@@ -1,4 +1,6 @@
-﻿using System.Net.Http.Headers;
+﻿using ProyectoWeb.Shared.DTOs;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 
@@ -14,9 +16,16 @@ namespace ProyectoWeb.Client.Repositorios
             this.httpClient = httpClient;
         }
 
-        private static JsonSerializerOptions defaultJson => new() { PropertyNameCaseInsensitive = true }; 
+        private static JsonSerializerOptions defaultJson => new() { PropertyNameCaseInsensitive = true };
 
-        public async Task<HttpResponseWrapper<T>> Get<T>(string url) {
+
+        public async Task<OCCabeceraDTO> GetByCliente(int id) {
+
+            var resultado = await httpClient.GetFromJsonAsync<OCCabeceraDTO>($"/api/ordenCompra/{id}");
+            return resultado; 
+        } 
+
+        public async Task<HttpResponseWrapper<T>> Get<T>(string url)    {
         
             var httpResponse = await httpClient.GetAsync(url);
 

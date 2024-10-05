@@ -4,10 +4,10 @@
 @inject NavigationManager navigatorManager
 
 
-<MudContainer MaxWidth="MaxWidth.Medium">
+<MudContainer MaxWidth="MaxWidth.Large">
    
     <MudGrid Spacing="12" Class="mt-5">
-        <MudItem xs="7">
+        <MudItem xs="6">
             <MudText Typo="Typo.h5" GutterBottom="true">Billing address</MudText>
             <MudGrid>
                
@@ -46,29 +46,29 @@
                 </MudItem>
                
                 <MudItem xs="6">
-                    <MudDatePicker Class="mt-4" @bind-Date="oFecha" Label="Fecha" />
+                    <MudDatePicker Class="mt-5" @bind-Date="oFecha" Label="Fecha" />
                 </MudItem>
                
            
                     <MudItem xs="6">
-                    <MudDatePicker Class="mt-4" @bind-Date="oFechaEntrega" Label="Fecha de Entrega" />
+                    <MudDatePicker Class="mt-5" @bind-Date="oFechaEntrega" Label="Fecha de Entrega" />
                     </MudItem>
              
 
-                <MudItem xs="12">
+                <MudItem xs="12" Class="mt-4">
                   <MudTextField @bind-Value="occ.Estado" Disabled="true" ></MudTextField>
                 </MudItem>
 
-                <MudItem xs="2">
+                <MudItem xs="2" Class="mt-5">
                     <MudTextField @bind-Value="ocd.Cantidad" Label="Cantidad"></MudTextField>
                 </MudItem>
 
 
-                <MudItem xs="3">
+                <MudItem xs="3" Class="mt-5">
                     <MudTextField @bind-Value="ocd.Precio" Label="Precio"></MudTextField>
                 </MudItem>
 
-                <MudItem xs="5">
+                <MudItem xs="5" Class="mt-5">
                     <MudSelect @bind-Value="ocd.LibroId" Label="Seleccione un Libro" Variant="Variant.Text">
 
                         @if (clientes != null)
@@ -86,34 +86,48 @@
                 </MudItem>
 
                 <MudItem xs="2">
-                    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="AgregarLibro" StartIcon="@Icons.Material.Filled.Add" Class="mt-4" ></MudButton>
+                    <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="AgregarLibro" Class="mt-8" />
+                   
                 </MudItem>
          
             </MudGrid>
         </MudItem>
-        <MudItem xs="5">
+        <MudItem xs="6">
             <MudText Typo="Typo.h5" GutterBottom="true">Carrito</MudText>
             <MudPaper Class="d-flex flex-column" Style="height:100%;" Outlined="true">
               
                 @if (occ.Detalle.Count() > 0 )
                 {
-                    <MudList T="string">
-
-                        @foreach ( var detalle in occ.Detalle)
-                        {
 
 
-                            <MudListItem Icon="@Icons.Material.Filled.Book">
-                                <div class="d-flex">
-                                    <MudText>@detalle.LibroId</MudText>
-                                    <MudText HtmlTag="span" Class="ml-auto">$@detalle.Total</MudText>
-                                </div>
-                            </MudListItem>
+                    <MudTable Items="occ.Detalle" Dense="true">
 
+                        <ColGroup>
 
-                        }
+                            <col style="width: 60px;" />
+                            <col />
+                            <col style="width: 60%;" />
+                            <col style ="width: 60px;" />
 
-                    </MudList>
+                        </ColGroup>
+
+                        <HeaderContent>
+                            <MudTh></MudTh>
+                            <MudTh>Cantidad</MudTh>
+                            <MudTh>Titulo</MudTh>
+                            <MudTh>SubTotal</MudTh>
+                        </HeaderContent>
+                           
+
+                        <RowTemplate>
+                            <MudTd> <MudIcon Icon="@Icons.Material.Filled.Book"/> </MudTd>
+                            <MudTd>@context.Cantidad</MudTd>
+                            <MudTd>@oLibros.Find(x => x.Id == context.LibroId).Titulo</MudTd>
+                            <MudTd>$@context.Total</MudTd>
+                        </RowTemplate>
+
+                    </MudTable>
+
                     <div class="mt-auto">
                         <MudDivider />
                         <div class="d-flex pa-4">
@@ -129,7 +143,7 @@
 
        
 
-        <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="GuardarOC" Class="mt-10 ms-10">Guardar Orden de Compra</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="GuardarOC" Class="mt-11 ms-10">Guardar Orden de Compra</MudButton>
 
 
     </MudGrid>
