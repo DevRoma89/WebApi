@@ -16,47 +16,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = ProyectoWeb.Client
 build_property.RootNamespace = ProyectoWeb.Client
-build_property.ProjectDir = C:\Users\augusto.ojeda\Desktop\ProyectoWeb\ProyectoWeb.Client\
+build_property.ProjectDir = C:\Users\Manu\source\repos\WebApi\ProyectoWeb.Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\augusto.ojeda\Desktop\ProyectoWeb\ProyectoWeb.Client
+build_property.MSBuildProjectDirectory = C:\Users\Manu\source\repos\WebApi\ProyectoWeb.Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/App.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/Pages/Autores.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Pages/Autores.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0b3Jlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/Pages/Clientes.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Pages/Clientes.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/Pages/Home.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Pages/CrearOC.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJPQy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/Pages/Libros.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Pages/Libros.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlicm9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/Pages/Usuarios.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Pages/Usuarios.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/_Imports.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/Layout/MainLayout.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-k4b4zfhxgx
 
-[C:/Users/augusto.ojeda/Desktop/ProyectoWeb/ProyectoWeb.Client/Layout/NavMenu.razor]
+[C:/Users/Manu/source/repos/WebApi/ProyectoWeb.Client/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-xaqcl6xeaq

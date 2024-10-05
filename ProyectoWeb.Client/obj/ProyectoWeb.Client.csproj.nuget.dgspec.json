@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj": {}
+    "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj": {
+    "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
         "projectName": "ProyectoWeb.Client",
-        "projectPath": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
-        "packagesPath": "C:\\Users\\augusto.ojeda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\obj\\",
+        "projectPath": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
+        "packagesPath": "C:\\Users\\Manu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\augusto.ojeda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Manu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj": {
-                "projectPath": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj"
+              "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj": {
+                "projectPath": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj"
               }
             }
           }
@@ -66,13 +66,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )",
+              "version": "[8.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )",
+              "version": "[8.0.2, )",
               "autoReferenced": true
             },
             "MudBlazor": {
@@ -98,7 +98,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.8, 8.0.8]"
+              "version": "[8.0.2, 8.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -106,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -115,20 +115,20 @@
         }
       }
     },
-    "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj": {
+    "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj",
         "projectName": "ProyectoWeb.Shared",
-        "projectPath": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj",
-        "packagesPath": "C:\\Users\\augusto.ojeda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\obj\\",
+        "projectPath": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj",
+        "packagesPath": "C:\\Users\\Manu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\augusto.ojeda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Manu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -182,7 +182,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

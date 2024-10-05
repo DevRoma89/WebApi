@@ -1,77 +1,242 @@
-﻿
+﻿@page "/crearOC"
+@inject IRepositorioOC repositorio
+@inject ISnackbar snackBar
+@inject NavigationManager navigatorManager
 
-<MudContainer Class="mt-16" MaxWidth="MaxWidth.Medium">
-    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Checkout</MudText>
-    <MudGrid Spacing="12" Class="mt-16">
+
+<MudContainer MaxWidth="MaxWidth.Medium">
+   
+    <MudGrid Spacing="12" Class="mt-5">
         <MudItem xs="7">
             <MudText Typo="Typo.h5" GutterBottom="true">Billing address</MudText>
             <MudGrid>
-                <MudItem xs="12">
-                    <MudTextField T="string" Label="Email" />
-                </MudItem>
-                <MudItem xs="12">
-                    <MudTextField T="string" Label="Mobile number" />
-                </MudItem>
-                <MudItem xs="12">
-                    <MudTextField T="string" Label="Personal number" />
-                </MudItem>
+               
                 <MudItem xs="6">
-                    <MudTextField T="string" Label="First name" />
+                    <MudSelect @bind-Value="occ.ClienteId" Label="Seleccione un Cliente" Variant="Variant.Text">
+
+                        @if (clientes != null)
+                        {
+
+                            foreach (var item in clientes)
+                            {
+                                <MudSelectItem Value="@item.Id"> @item.Nombre </MudSelectItem>
+
+                            }
+
+                        }
+
+                    </MudSelect>
                 </MudItem>
+
                 <MudItem xs="6">
-                    <MudTextField T="string" Label="Last name" />
+                    <MudSelect @bind-Value="occ.UsuarioId" Label="Seleccione un Usuario" Variant="Variant.Text">
+
+                        @if (usuarios != null)
+                        {
+
+                            foreach (var item in usuarios)
+                            {
+                                <MudSelectItem Value="@item.Id"> @item.Username </MudSelectItem>
+
+                            }
+
+                        }
+
+                    </MudSelect>
                 </MudItem>
+               
+                <MudItem xs="6">
+                    <MudDatePicker Class="mt-4" @bind-Date="oFecha" Label="Fecha" />
+                </MudItem>
+               
+           
+                    <MudItem xs="6">
+                    <MudDatePicker Class="mt-4" @bind-Date="oFechaEntrega" Label="Fecha de Entrega" />
+                    </MudItem>
+             
+
                 <MudItem xs="12">
-                    <MudTextField T="string" Label="Address" />
+                  <MudTextField @bind-Value="occ.Estado" Disabled="true" ></MudTextField>
                 </MudItem>
-                <MudItem xs="6">
-                    <MudTextField T="string" Label="Postal code" />
+
+                <MudItem xs="2">
+                    <MudTextField @bind-Value="ocd.Cantidad" Label="Cantidad"></MudTextField>
                 </MudItem>
-                <MudItem xs="6">
-                    <MudTextField T="string" Label="Postal Area" />
+
+
+                <MudItem xs="3">
+                    <MudTextField @bind-Value="ocd.Precio" Label="Precio"></MudTextField>
                 </MudItem>
-                <MudItem xs="12" Class="d-flex justify-center">
-                    <MudButton Variant="Variant.Filled" DropShadow="false" Color="Color.Primary" Size="Size.Large" Class="mt-8">Continue to Payment</MudButton>
+
+                <MudItem xs="5">
+                    <MudSelect @bind-Value="ocd.LibroId" Label="Seleccione un Libro" Variant="Variant.Text">
+
+                        @if (clientes != null)
+                        {
+
+                            foreach (var item in oLibros)
+                            {
+                                <MudSelectItem Value="@item.Id"> @item.Titulo </MudSelectItem>
+
+                            }
+
+                        }
+
+                    </MudSelect>
                 </MudItem>
+
+                <MudItem xs="2">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="AgregarLibro" StartIcon="@Icons.Material.Filled.Add" Class="mt-4" ></MudButton>
+                </MudItem>
+         
             </MudGrid>
         </MudItem>
         <MudItem xs="5">
-            <MudText Typo="Typo.h5" GutterBottom="true">Cart</MudText>
+            <MudText Typo="Typo.h5" GutterBottom="true">Carrito</MudText>
             <MudPaper Class="d-flex flex-column" Style="height:100%;" Outlined="true">
-                <MudList T="string">
-                    <MudListItem Icon="@Icons.Material.Filled.ContentCut">
-                        <div class="d-flex">
-                            <MudText>Scissor - Big</MudText>
-                            <MudText HtmlTag="span" Class="ml-auto">$5</MudText>
+              
+                @if (occ.Detalle.Count() > 0 )
+                {
+                    <MudList T="string">
+
+                        @foreach ( var detalle in occ.Detalle)
+                        {
+
+
+                            <MudListItem Icon="@Icons.Material.Filled.Book">
+                                <div class="d-flex">
+                                    <MudText>@detalle.LibroId</MudText>
+                                    <MudText HtmlTag="span" Class="ml-auto">$@detalle.Total</MudText>
+                                </div>
+                            </MudListItem>
+
+
+                        }
+
+                    </MudList>
+                    <div class="mt-auto">
+                        <MudDivider />
+                        <div class="d-flex pa-4">
+                            <MudText>Total:</MudText>
+                            <MudText Class="ml-auto"><b>$@occ.Monto</b></MudText>
                         </div>
-                    </MudListItem>
-                    <MudListItem Icon="@Icons.Material.Filled.AirplanemodeActive">
-                        <div class="d-flex">
-                            <MudText>Model Airplane</MudText>
-                            <MudText Class="ml-auto">$20</MudText>
-                        </div>
-                    </MudListItem>
-                    <MudListItem Icon="@Icons.Material.Filled.Create">
-                        <div class="d-flex">
-                            <MudText>Plastic Glue</MudText>
-                            <MudText Class="ml-auto">$12</MudText>
-                        </div>
-                    </MudListItem>
-                    <MudListItem Icon="@Icons.Material.Filled.ColorLens">
-                        <div class="d-flex">
-                            <MudText>Color set - Modern planes</MudText>
-                            <MudText Class="ml-auto">$16</MudText>
-                        </div>
-                    </MudListItem>
-                </MudList>
-                <div class="mt-auto">
-                    <MudDivider />
-                    <div class="d-flex pa-4">
-                        <MudText>Total:</MudText>
-                        <MudText Class="ml-auto"><b>$53</b></MudText>
                     </div>
-                </div>
+                
+                }
+
             </MudPaper>
         </MudItem>
+
+       
+
+        <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="GuardarOC" Class="mt-10 ms-10">Guardar Orden de Compra</MudButton>
+
+
     </MudGrid>
 </MudContainer>
+
+
+@code {
+
+    private List<Cliente> clientes = new List<Cliente>();
+    private List<Usuario> usuarios = new List<Usuario>();
+
+    private DateTime? oFecha = DateTime.Now;
+    private DateTime? oFechaEntrega = DateTime.Now;
+    private OrdenCompraCabecera occ = new OrdenCompraCabecera { Estado = "PENDIENTE" , Detalle = new List<OrdenCompraDetalle>() };
+    private OrdenCompraDetalle ocd = new OrdenCompraDetalle { Cantidad = 1, Precio = 0 };
+    private List<LibroDTO> oLibros = new List<LibroDTO>(); 
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetClientes();
+        await GetUsuarios();
+        await GetLibros();
+    }
+
+
+    public async Task<List<Cliente>> GetClientes()
+    {
+
+        var httpResponse = await repositorio.Get<List<Cliente>>("/api/cliente");
+
+        if (!(httpResponse.Error))
+        {
+            clientes = httpResponse.Response;
+
+            return clientes;
+        }
+
+        return clientes;
+
+    }
+
+    public async Task<List<LibroDTO>> GetLibros()
+    {
+
+        var httpResponse = await repositorio.Get<List<LibroDTO>>("/api/libro");
+
+        if (!(httpResponse.Error))
+        {
+            oLibros  = httpResponse.Response;
+
+            return oLibros;
+        }
+
+        return oLibros;
+
+    }
+
+    public async Task<List<Usuario>> GetUsuarios()
+    {
+
+        var httpResponse = await repositorio.Get<List<Usuario>>("/api/usuario");
+
+        if (!(httpResponse.Error))
+        {
+            usuarios = httpResponse.Response;
+
+            return usuarios;
+        }
+
+        return usuarios;
+
+    }
+
+    public void AgregarLibro()
+    {
+        ocd.Total = ocd.Cantidad * ocd.Precio;
+        occ.Monto = occ.Monto + ocd.Total ;  
+        occ.Detalle.Add(ocd);
+        ocd = new OrdenCompraDetalle { Cantidad = 1, Precio = 0 };
+        StateHasChanged();
+
+    }
+
+    public async Task GuardarOC()
+    {
+
+        if ( !(oFecha == null && oFechaEntrega == null))
+        {
+            occ.FechaEntrega = oFechaEntrega ?? DateTime.Now;
+            occ.Fecha = oFecha ?? DateTime.Now;
+
+        }
+
+        var respuesta = await repositorio.Post<OrdenCompraCabecera>("api/ordenCompra", occ);
+
+        if (respuesta.Error)
+        {
+            snackBar.Add(await respuesta.GetBody(), Severity.Error);
+        }
+        else
+        {
+            snackBar.Add("Orden de Compra agregada correctamente", Severity.Success);
+            occ = new OrdenCompraCabecera { Estado = "PENDIENTE", Detalle = new List<OrdenCompraDetalle>() };
+            StateHasChanged();
+
+        }
+
+    }
+
+}

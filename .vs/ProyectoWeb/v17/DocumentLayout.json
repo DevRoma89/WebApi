@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\",
+  "WorkspaceRootPath": "C:\\Users\\Manu\\source\\repos\\WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\augusto.ojeda\\desktop\\proyectoweb\\proyectoweb.client\\pages\\crearoc.razor||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|solutionrelative:proyectoweb.client\\pages\\crearoc.razor||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\manu\\source\\repos\\webapi\\proyectoweb.client\\pages\\crearoc.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|solutionrelative:proyectoweb.client\\pages\\crearoc.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\augusto.ojeda\\desktop\\proyectoweb\\proyectoweb.client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|solutionrelative:proyectoweb.client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A553A2FD-320F-44AB-A03E-EF57BD3B851C}|ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj|c:\\users\\manu\\source\\repos\\webapi\\proyectoweb.shared\\entidades\\ordencompracabecera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A553A2FD-320F-44AB-A03E-EF57BD3B851C}|ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj|solutionrelative:proyectoweb.shared\\entidades\\ordencompracabecera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\augusto.ojeda\\desktop\\proyectoweb\\proyectoweb.client\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|c:\\users\\manu\\source\\repos\\webapi\\proyectoweb.server\\controllers\\oc\\ordencompracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45584146-B09E-4AB0-A9A1-60250A052796}|ProyectoWeb.Server\\ProyectoWeb.Server.csproj|solutionrelative:proyectoweb.server\\controllers\\oc\\ordencompracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\manu\\source\\repos\\webapi\\proyectoweb.client\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|solutionrelative:proyectoweb.client\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A553A2FD-320F-44AB-A03E-EF57BD3B851C}|ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj|c:\\users\\augusto.ojeda\\desktop\\proyectoweb\\proyectoweb.shared\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A553A2FD-320F-44AB-A03E-EF57BD3B851C}|ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj|solutionrelative:proyectoweb.shared\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\augusto.ojeda\\desktop\\proyectoweb\\proyectoweb.client\\pages\\usuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|solutionrelative:proyectoweb.client\\pages\\usuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|c:\\users\\augusto.ojeda\\desktop\\proyectoweb\\proyectoweb.client\\proyectoweb.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BE69890F-268D-4F98-B0BE-9FD693519A3E}|ProyectoWeb.Client\\ProyectoWeb.Client.csproj|solutionrelative:proyectoweb.client\\proyectoweb.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A553A2FD-320F-44AB-A03E-EF57BD3B851C}|ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj|c:\\users\\manu\\source\\repos\\webapi\\proyectoweb.shared\\dtos\\occabeceradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A553A2FD-320F-44AB-A03E-EF57BD3B851C}|ProyectoWeb.Shared\\ProyectoWeb.Shared.csproj|solutionrelative:proyectoweb.shared\\dtos\\occabeceradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,88 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CrearOC.razor",
-              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Pages\\CrearOC.razor",
-              "RelativeDocumentMoniker": "ProyectoWeb.Client\\Pages\\CrearOC.razor",
-              "ToolTip": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Pages\\CrearOC.razor",
-              "RelativeToolTip": "ProyectoWeb.Client\\Pages\\CrearOC.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-04T20:48:53.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "ProyectoWeb.Client\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "ProyectoWeb.Client\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-04T20:46:11.679Z",
+              "Title": "OrdenCompraCabecera.cs",
+              "DocumentMoniker": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\Entidades\\OrdenCompraCabecera.cs",
+              "RelativeDocumentMoniker": "ProyectoWeb.Shared\\Entidades\\OrdenCompraCabecera.cs",
+              "ToolTip": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\Entidades\\OrdenCompraCabecera.cs",
+              "RelativeToolTip": "ProyectoWeb.Shared\\Entidades\\OrdenCompraCabecera.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBQAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T00:20:48.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\Entidades\\Usuario.cs",
-              "RelativeDocumentMoniker": "ProyectoWeb.Shared\\Entidades\\Usuario.cs",
-              "ToolTip": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Shared\\Entidades\\Usuario.cs",
-              "RelativeToolTip": "ProyectoWeb.Shared\\Entidades\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T20:37:33.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Clientes.razor",
-              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Pages\\Clientes.razor",
+              "DocumentMoniker": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\Pages\\Clientes.razor",
               "RelativeDocumentMoniker": "ProyectoWeb.Client\\Pages\\Clientes.razor",
-              "ToolTip": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Pages\\Clientes.razor",
+              "ToolTip": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\Pages\\Clientes.razor",
               "RelativeToolTip": "ProyectoWeb.Client\\Pages\\Clientes.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAABrAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-04T20:36:11.852Z",
+              "WhenOpened": "2024-10-04T23:34:28.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Usuarios.razor",
-              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Pages\\Usuarios.razor",
-              "RelativeDocumentMoniker": "ProyectoWeb.Client\\Pages\\Usuarios.razor",
-              "ToolTip": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\Pages\\Usuarios.razor",
-              "RelativeToolTip": "ProyectoWeb.Client\\Pages\\Usuarios.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-04T18:57:28.037Z",
+              "Title": "OCCabeceraDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\DTOs\\OCCabeceraDTO.cs",
+              "RelativeDocumentMoniker": "ProyectoWeb.Shared\\DTOs\\OCCabeceraDTO.cs",
+              "ToolTip": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Shared\\DTOs\\OCCabeceraDTO.cs",
+              "RelativeToolTip": "ProyectoWeb.Shared\\DTOs\\OCCabeceraDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T23:29:45.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProyectoWeb.Client.csproj",
-              "DocumentMoniker": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
-              "RelativeDocumentMoniker": "ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
-              "ToolTip": "C:\\Users\\augusto.ojeda\\Desktop\\ProyectoWeb\\ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
-              "RelativeToolTip": "ProyectoWeb.Client\\ProyectoWeb.Client.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-04T16:37:57.734Z"
+              "DocumentIndex": 2,
+              "Title": "OrdenCompraController.cs",
+              "DocumentMoniker": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "RelativeDocumentMoniker": "ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "ToolTip": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "RelativeToolTip": "ProyectoWeb.Server\\Controllers\\OC\\OrdenCompraController.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAIwH8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T23:29:27.904Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrearOC.razor",
+              "DocumentMoniker": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\Pages\\CrearOC.razor",
+              "RelativeDocumentMoniker": "ProyectoWeb.Client\\Pages\\CrearOC.razor",
+              "ToolTip": "C:\\Users\\Manu\\source\\repos\\WebApi\\ProyectoWeb.Client\\Pages\\CrearOC.razor",
+              "RelativeToolTip": "ProyectoWeb.Client\\Pages\\CrearOC.razor",
+              "ViewState": "AQIAAOEAAAAAAAAAAAAAAOoAAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T23:28:49.864Z",
+              "EditorCaption": ""
             }
           ]
         }
