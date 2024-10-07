@@ -1,0 +1,70 @@
+﻿@inject IRepositorioOC repositorio
+@inject ISnackbar snackBar
+
+<MudDialog>
+    <TitleContent>
+        Editar Fecha de Entrega
+    </TitleContent>
+    <DialogContent>
+        <MudContainer>
+            <MudGrid>
+                <MudItem>
+                    <MudDatePicker @bind-Date="oFecha" Label="Nueva Fecha de Entrega"></MudDatePicker>
+                </MudItem>
+            </MudGrid>
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="EditarFecha">Ok</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    private MudDialogInstance MudDialog { get; set; }
+
+    [Parameter]
+    public int Id { get; set; }
+
+
+    private DateTime? oFecha = DateTime.Now;
+
+    public async Task EditarFecha()
+    {
+
+        if ( oFecha.HasValue)
+        {
+
+            DateTime fecha = oFecha.Value;
+            var respuesta = await repositorio.Put<DateTime>($"/api/ordenCompra/fecha/{Id}", fecha);
+
+
+            if (respuesta.Error)
+            {
+                snackBar.Add(await respuesta.GetBody(), Severity.Error);
+            }
+            else
+            {
+                snackBar.Add("Fecha Editada Correctamente", Severity.Success);
+           
+                MudDialog.Close();
+
+            }
+
+
+
+        }
+
+       
+        
+    
+    }
+
+
+
+
+    private void Cancel() => MudDialog.Cancel();
+
+
+}

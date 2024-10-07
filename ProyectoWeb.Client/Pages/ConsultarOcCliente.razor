@@ -3,9 +3,10 @@
 @inject IRepositorioOC repositorio
 @inject ISnackbar snackBar
 @inject NavigationManager navigatorManager
+@inject IDialogService DialogService
 
 
-<PageTitle>Inicio</PageTitle>
+<PageTitle>Consultar</PageTitle>
 
 <MudCard Elevation="25">
 
@@ -13,7 +14,7 @@
 
         <CardHeaderContent>
 
-            <MudText Typo="Typo.h6"> Agregar / Buscar Autores </MudText>
+            <MudText Typo="Typo.h6">Consultar OC por Cliente </MudText>
         </CardHeaderContent>
 
     </MudCardHeader>
@@ -45,30 +46,43 @@
 </MudCard>
 <br />
 
- <MudTable Elevation="25" Items="occ" Hover="true" >
-   
+
+<MudTable Elevation="25" Items="occ" Hover="true" Dense="true">
+
     <HeaderContent>
         <MudTh>Nro Oc</MudTh>
+        <MudTh>Cliente</MudTh>
+        <MudTh>Usuario</MudTh>
         <MudTh>Fecha</MudTh>
         <MudTh>Fecha de Entrega</MudTh>
+        <MudTh></MudTh>
         <MudTh>Estado</MudTh>
+        <MudTh></MudTh>
         <MudTh>Monto Total</MudTh>
         <MudTh>Ver OC</MudTh>
     </HeaderContent>
+   
     <RowTemplate>
-    
-        
-            <MudTd DataLabel="Nombre">@context.Id</MudTd>
-            <MudTd DataLabel="Fecha">@context.Fecha</MudTd>
-            <MudTd DataLabel="FechaEntrega">@context.FechaEntrega</MudTd>
-            <MudTd DataLabel="Estado">@context.Estado</MudTd>
-            <MudTd DataLabel="Monto">@context.Monto</MudTd>
+
+        <MudTd DataLabel="Nro Oc">@context.Id</MudTd>
+        <MudTd DataLabel="Cliente">@context.NombreCliente</MudTd>
+        <MudTd DataLabel="Usuario">@context.NombreUsuario</MudTd>
+        <MudTd DataLabel="Fecha">@context.Fecha</MudTd>
+        <MudTd DataLabel="FechaEntrega">@context.FechaEntrega</MudTd>
+        <MudTd DataLabel="Editar Fecha"><MudFab Color="Color.Warning" Size="Size.Small" StartIcon="@Icons.Material.Filled.CalendarMonth" OnClick="() => EditarFecha(context.Id)"></MudFab></MudTd>
+        <MudTd DataLabel="Estado">@context.Estado</MudTd>
+        <MudTd DataLabel="Editar Estado"><MudFab Color="Color.Warning" Size="Size.Small" StartIcon="@Icons.Material.Filled.ContentPaste" OnClick="() => EditarEstado(context.Id)"></MudFab></MudTd>
+        <MudTd DataLabel="Monto">@context.Monto</MudTd>
         <MudTd DataLabel="Accion">
-            <MudFab Color="Color.Primary" Size="Size.Small" StartIcon="@Icons.Material.Filled.Preview" OnClick="() => IrA(context.Id)"/>
+            <MudFab Color="Color.Primary" Size="Size.Small" StartIcon="@Icons.Material.Filled.Preview" OnClick="() => IrA(context.Id)" />
         </MudTd>
+
         
 
     </RowTemplate>
+
+
+
 
     <PagerContent>
         <MudTablePager />
@@ -82,7 +96,7 @@
 
     private Cliente cliente = new Cliente(); 
     private List<Cliente> clientes = new List<Cliente>();
-    private List<OrdenCompraCabecera> occ = new List<OrdenCompraCabecera>(); 
+    private List<OCCabeceraDTO> occ = new List<OCCabeceraDTO>(); 
 
     protected override async Task OnInitializedAsync()
     {
@@ -99,10 +113,10 @@
 
     }
 
-    public async Task<List<OrdenCompraCabecera>> GetOCC()
+    public async Task<List<OCCabeceraDTO>> GetOCC()
     {
 
-        var httpResponse = await repositorio.Get<List<OrdenCompraCabecera>>($"/cliente/{cliente.Id}");
+        var httpResponse = await repositorio.Get<List<OCCabeceraDTO>>($"/api/ordenCompra/simple/{cliente.Id}");
 
         if (!(httpResponse.Error))
         {
@@ -133,6 +147,51 @@
 
     }
 
+    public async Task EditarFecha(int id)
+    {
+        var opciones = new DialogOptions { CloseOnEscapeKey = true, Position = DialogPosition.TopCenter };
+
+        var parametros = new DialogParameters<EditarFechaDialog>
+        {
+            { x => x.Id, id}
+
+        };
+
+        
+        var dialog = await DialogService.ShowAsync<EditarFechaDialog>("Editar Fecha", parametros, opciones);
+
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+          
+            await GetOCC();
+        }
+
+    }
+
+    public async Task EditarEstado(int id)
+    {
+        var opciones = new DialogOptions { CloseOnEscapeKey = true };
+
+        var parametros = new DialogParameters<EditarEstadoDialog>
+        {
+            { x => x.Id, id}
+
+        };
+
+
+        var dialog = await DialogService.ShowAsync<EditarEstadoDialog>("Editar Estado", parametros, opciones);
+
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+
+            await GetOCC();
+        }
+
+    }
     
 
 }

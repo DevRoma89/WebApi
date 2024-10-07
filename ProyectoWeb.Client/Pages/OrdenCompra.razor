@@ -102,7 +102,7 @@ else
                             <RowTemplate>
                                 <MudTd> <MudIcon Icon="@Icons.Material.Filled.Book" /> </MudTd>
                                 <MudTd>@context.Cantidad</MudTd>
-                                <MudTd>@context.LibroId</MudTd>
+                                <MudTd>@oLibros.Find(x => x.Id == context.LibroId).Titulo</MudTd>
                                 <MudTd>$@context.Total</MudTd>
                             </RowTemplate>
 

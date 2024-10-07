@@ -47,12 +47,16 @@
         <MudTd>Cedula</MudTd>
         <MudTd>Telefono</MudTd>
         <MudTd>Direccion</MudTd>
+        <MudTd>Accion</MudTd>
     </HeaderContent>
     <RowTemplate>
         <MudTd DataLabel="Nombre">@context.Nombre</MudTd>
         <MudTd DataLabel="Cedula">@context.Cedula</MudTd>
         <MudTd DataLabel="Telefono">@context.Telefono</MudTd>
         <MudTd DataLabel="Direccion">@context.Direccion</MudTd>
+        <MudTd DataLabel="Eliminar">
+            <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small" OnClick="() => Eliminar(context.Id)" ></MudFab>
+        </MudTd>
     </RowTemplate>
 
     <PagerContent>
@@ -128,6 +132,24 @@
             cliente = new Cliente();
             await GetCliente();
         }
+
+    }
+
+    public async Task Eliminar( int id)
+    {
+
+        var respuesta = await repositorio.Delete($"api/cliente/{id}");
+
+        if (respuesta.Error)
+        {
+            snackBar.Add(await respuesta.GetBody(), Severity.Error);
+        }
+        else
+        {
+            snackBar.Add("Cliente borrado correctamente", Severity.Success);
+            await GetCliente();
+        }
+
 
     }
 

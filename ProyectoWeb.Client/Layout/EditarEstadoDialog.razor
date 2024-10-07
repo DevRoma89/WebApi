@@ -1,0 +1,65 @@
+﻿@inject IRepositorioOC repositorio
+@inject ISnackbar snackBar
+
+<MudDialog>
+    <TitleContent>
+        Editar Fecha de Entrega
+    </TitleContent>
+    <DialogContent>
+        <MudContainer>
+            <MudGrid>
+                <MudItem>
+                    <MudSelect @bind-Value="eleccion" AnchorOrigin="Origin.TopCenter">
+                        @foreach (var item in estado)
+                        {
+                            <MudSelectItem Value="@item">@item</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudItem>
+            </MudGrid>
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="EditarFecha">Ok</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    private MudDialogInstance MudDialog { get; set; }
+
+    [Parameter]
+    public int Id { get; set; }
+
+    string eleccion = "";
+    string[] estado = { "ENTREGADO", "ANULADO" };
+
+    private void Cancel() => MudDialog.Cancel();
+
+    public async Task EditarFecha()
+    {
+
+            
+        var respuesta = await repositorio.Put<string>($"/api/ordenCompra/estado/{Id}", eleccion);
+
+
+            if (respuesta.Error)
+            {
+                snackBar.Add(await respuesta.GetBody(), Severity.Error);
+            }
+            else
+            {
+                snackBar.Add("Fecha Editada Correctamente", Severity.Success);
+           
+                MudDialog.Close();
+
+            }
+
+    
+    }
+
+}
+
+
+ 

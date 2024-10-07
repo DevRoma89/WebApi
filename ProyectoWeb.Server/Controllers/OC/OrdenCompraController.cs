@@ -66,6 +66,19 @@ namespace ProyectoWeb.Server.Controllers.OC
         
         }
 
+        [HttpGet("simple/{id:int}")]
+        public async Task<ActionResult<List<OCCabeceraDTO>>> GetSimpleById(int id)
+        {
+
+            var resultado = await context.Cabeceras.Include(x => x.Cliente).Include(x => x.Usuario)
+                .Where(x => x.ClienteId == id)
+                .Select(s => OCCabeceraDTO.CrearDTO(s))
+                .ToListAsync();
+
+            return Ok(resultado);
+
+        }
+
         [HttpGet("/cliente/{id:int}")]
         public async Task<ActionResult<List<OrdenCompraCabecera>>> GetByCliente([FromRoute] int id) {
 
@@ -102,8 +115,8 @@ namespace ProyectoWeb.Server.Controllers.OC
 
         }
 
-        [HttpGet("/rangoFecha")]
-        public async Task<ActionResult<List<OrdenCompraCabecera>>> GetByRangoFecha([FromQuery] DateTime fechaInicio, [FromQuery] DateTime fechaFin ) {
+        [HttpGet("rangoFecha")]
+        public async Task<ActionResult<List<OCCabeceraDTO>>> GetByRangoFecha([FromQuery] DateTime fechaInicio, [FromQuery] DateTime fechaFin ) {
 
             if (fechaInicio > fechaFin)
             {
@@ -111,7 +124,12 @@ namespace ProyectoWeb.Server.Controllers.OC
             }
           
 
-            return await context.Cabeceras.Where( x => x.Fecha >= fechaInicio && x.Fecha <= fechaFin ).ToListAsync();   
+            var resultado = await context.Cabeceras.Include(x => x.Cliente).Include(x => x.Usuario).Include(x => x.Detalle)
+                .Where(x => x.Fecha >= fechaInicio && x.Fecha <= fechaFin)
+               .Select(s => OCCabeceraDTO.CrearDTO(s))
+               .ToListAsync();
+
+            return Ok(resultado);
 
 
         }
